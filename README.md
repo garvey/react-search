@@ -3,6 +3,5 @@
 
 Some npm notes.
 
-- Stop all instances of node
-killall node
+- Stop all instances of node -- killall node
 
