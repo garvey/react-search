@@ -1,13 +1,15 @@
 {
-  "name": "redux-simple-starter",
+  "name": "react-youtube",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "Simple react project",
   "main": "index.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "repository": "git@github.com:garvey/react-search.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "build-less": "lessc style/less/index.less style/style.css && echo 'Less compiled!'",
+    "watch-less": "ulimit -n 800 && watch 'npm run build-less' style/less"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +29,7 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "less": "=2.7.3",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
